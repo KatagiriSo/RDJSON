@@ -14,6 +14,9 @@
 		321D6F361D920F3E0009CF44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 321D6F341D920F3E0009CF44 /* LaunchScreen.storyboard */; };
 		321D6F411D920F3E0009CF44 /* RDJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321D6F401D920F3E0009CF44 /* RDJSONTests.swift */; };
 		321D6F4C1D920F3E0009CF44 /* RDJSONUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321D6F4B1D920F3E0009CF44 /* RDJSONUITests.swift */; };
+		32F946761D9212090042E5B5 /* RDJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F946751D9212090042E5B5 /* RDJSON.swift */; };
+		32F946771D9212090042E5B5 /* RDJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F946751D9212090042E5B5 /* RDJSON.swift */; };
+		32F946781D9212090042E5B5 /* RDJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F946751D9212090042E5B5 /* RDJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,7 @@
 		321D6F471D920F3E0009CF44 /* RDJSONUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RDJSONUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		321D6F4B1D920F3E0009CF44 /* RDJSONUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDJSONUITests.swift; sourceTree = "<group>"; };
 		321D6F4D1D920F3E0009CF44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32F946751D9212090042E5B5 /* RDJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 			children = (
 				321D6F2B1D920F3E0009CF44 /* AppDelegate.swift */,
 				321D6F2D1D920F3E0009CF44 /* ViewController.swift */,
+				32F946751D9212090042E5B5 /* RDJSON.swift */,
 				321D6F2F1D920F3E0009CF44 /* Main.storyboard */,
 				321D6F321D920F3E0009CF44 /* Assets.xcassets */,
 				321D6F341D920F3E0009CF44 /* LaunchScreen.storyboard */,
@@ -188,18 +193,21 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Rodhos;
 				TargetAttributes = {
 					321D6F271D920F3D0009CF44 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 					321D6F3B1D920F3E0009CF44 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 321D6F271D920F3D0009CF44;
 					};
 					321D6F461D920F3E0009CF44 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 321D6F271D920F3D0009CF44;
 					};
 				};
@@ -257,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				321D6F2E1D920F3E0009CF44 /* ViewController.swift in Sources */,
+				32F946761D9212090042E5B5 /* RDJSON.swift in Sources */,
 				321D6F2C1D920F3E0009CF44 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				321D6F411D920F3E0009CF44 /* RDJSONTests.swift in Sources */,
+				32F946771D9212090042E5B5 /* RDJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				321D6F4C1D920F3E0009CF44 /* RDJSONUITests.swift in Sources */,
+				32F946781D9212090042E5B5 /* RDJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,8 +337,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -349,7 +362,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -371,8 +384,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -388,9 +403,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -399,10 +415,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = RDJSON/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Rodhos.RDJSON;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -410,10 +429,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = RDJSON/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Rodhos.RDJSON;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -425,6 +447,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Rodhos.RDJSONTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RDJSON.app/RDJSON";
 			};
 			name = Debug;
@@ -437,6 +460,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Rodhos.RDJSONTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RDJSON.app/RDJSON";
 			};
 			name = Release;
@@ -448,6 +472,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Rodhos.RDJSONUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = RDJSON;
 			};
 			name = Debug;
@@ -459,6 +484,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Rodhos.RDJSONUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = RDJSON;
 			};
 			name = Release;
@@ -482,6 +508,7 @@
 				321D6F521D920F3E0009CF44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		321D6F531D920F3E0009CF44 /* Build configuration list for PBXNativeTarget "RDJSONTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +517,7 @@
 				321D6F551D920F3E0009CF44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		321D6F561D920F3E0009CF44 /* Build configuration list for PBXNativeTarget "RDJSONUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +526,7 @@
 				321D6F581D920F3E0009CF44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
