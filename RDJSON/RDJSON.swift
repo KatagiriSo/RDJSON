@@ -45,6 +45,29 @@ public enum JSONValue  {
         }
     }
     
+    public func raw()->Any {
+        switch self {
+        case .Object(let dic):
+            var retDic:[String:Any] = [:]
+            for (key, value) in dic {
+                retDic[key] = value.raw()
+            }
+            return retDic
+        case .Array(let list):
+            var retList:[Any] = []
+            for ob in list {
+                retList.append(ob.raw())
+            }
+            return retList
+        case .Number(let n):
+            return n
+        case .String(let s):
+            return s;
+        case .Null:
+            return NSNull()
+        }
+    }
+    
     public var string:String? {
         if case .String(let s) = self {
             return s
