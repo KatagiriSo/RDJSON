@@ -126,21 +126,21 @@ public enum JSONValue  {
 }
 
 public extension JSONValue {
-    public var date:Date? {
+    var date:Date? {
         if case .String(let s) = self {
             return self.date(from:s)
         }
         return nil
     }
     
-    public func date(from:String?)->Date? {
+    func date(from:String?)->Date? {
         guard let string : String = from else { return nil}
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy/MM/DD HH:mm:ss"
         return dateFormatter.date(from: string)
     }
     
-    public func dateString(from:Date?)->String? {
+    func dateString(from:Date?)->String? {
         guard let date : Date = from else { return nil}
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy/MM/DD HH:mm:ss"
