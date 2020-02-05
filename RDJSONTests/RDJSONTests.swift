@@ -24,11 +24,32 @@ class RDJSONTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let ms = "Hello! from js!!!"
+        let txt = "{\"messageID\":\"Test\",\"param\":{\"message\":\"Hello! from js!!!\"}}"
+        guard let jsonVal = JSONValue.parse(txt: txt) else {
+            XCTAssert(false, "txt parse")
+            return
+        }
+        
+        guard let messagID = jsonVal["messageID"]?.string else {
+            XCTAssert(false, "key:messageID")
+            return
+        }
+        XCTAssert(messagID == "Test", "key:Test")
+        
+        guard let message = jsonVal["param"]?["message"]?.string else {
+            XCTAssert(false, "key:param.message")
+            return
+        }
+        
+        XCTAssert(message == ms, "message\(message) != \(ms)")
+        
     }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }

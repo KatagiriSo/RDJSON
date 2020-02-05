@@ -9,7 +9,7 @@
 import Foundation
 
 public enum JSONValue  {
-    case Object([String:JSONValue])
+    case Dic([String:JSONValue])
     case Array([JSONValue])
     case String(String)
     case Number(NSNumber)
@@ -18,7 +18,7 @@ public enum JSONValue  {
         if let dict = json as? [String:Any] {
             var d:[String:JSONValue] = [:]
             for (key, value) in dict { d[key] = wrap(json: value) }
-            return .Object(d)
+            return .Dic(d)
         }
         
         if let array:[Any] = json as? [Any] {
@@ -37,6 +37,13 @@ public enum JSONValue  {
         return .Null
     }
     
+    public static func parse(txt: String) -> JSONValue? {
+        guard let data = txt.data(using: .utf8) else {
+            return nil
+        }
+        return parse(data: data)
+    }
+    
     public static func parse(data: Data) -> JSONValue? {
         if let json: Any = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) {
             return wrap(json: json)
@@ -47,7 +54,7 @@ public enum JSONValue  {
     
     public func raw()->Any {
         switch self {
-        case .Object(let dic):
+        case .Dic(let dic):
             var retDic:[String:Any] = [:]
             for (key, value) in dic {
                 retDic[key] = value.raw()
@@ -93,7 +100,7 @@ public enum JSONValue  {
     }
     
     public var dictionary: [String:JSONValue]? {
-        if case .Object(let o) = self {
+        if case .Dic(let o) = self {
             return o
         } else {
             return nil
@@ -109,7 +116,7 @@ public enum JSONValue  {
     }
     
     public subscript(index: String) -> JSONValue? {
-        if case .Object(let o) = self , let value: JSONValue = o[index] {
+        if case .Dic(let o) = self , let value: JSONValue = o[index] {
             return value
         } else {
             return nil
